@@ -1,0 +1,75 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://image/joueur/asset/particl-un.png" type="Texture" id=1]
+[ext_resource path="res://image/hud/full.png" type="Texture" id=2]
+[ext_resource path="res://image/hud/under.png" type="Texture" id=3]
+[ext_resource path="res://image/joueur/asset/totem01.png" type="Texture" id=4]
+[ext_resource path="res://image/joueur/asset/petzone.png" type="Texture" id=5]
+[ext_resource path="res://scene/pet01.gd" type="Script" id=6]
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 32, 64 )
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 856.15
+
+[node name="pet01" type="KinematicBody2D"]
+pause_mode = 1
+collision_layer = 0
+collision_mask = 0
+script = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 8 )
+shape = SubResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -4.76837e-07, -1.19209e-07 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 4 )
+
+[node name="bras_pet" type="Sprite" parent="."]
+visible = false
+position = Vector2( -9.53674e-07, 9.53674e-07 )
+rotation = 6.28319
+scale = Vector2( 0.155258, 0.0202791 )
+texture = ExtResource( 1 )
+offset = Vector2( 280, 0 )
+
+[node name="pos_b" type="Position2D" parent="bras_pet"]
+position = Vector2( 520, 0 )
+scale = Vector2( 8.33333, 8.33333 )
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2( 0.68, 0.68 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 2.27374e-13, 0 )
+shape = SubResource( 5 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+visible = false
+scale = Vector2( 1.56, 1.56 )
+texture = ExtResource( 5 )
+
+[node name="life" type="TextureProgress" parent="."]
+visible = false
+margin_left = -120.0
+margin_top = -200.0
+margin_right = 480.0
+margin_bottom = 400.0
+rect_scale = Vector2( 0.4, 0.4 )
+max_value = 5.0
+step = 5.0
+value = 5.0
+texture_under = ExtResource( 3 )
+texture_progress = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hud" type="CanvasLayer" parent="."]
+layer = 0
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]

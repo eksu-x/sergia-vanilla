@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/DALL·E 2023-01-22 17.24.48 - une foret de nuit avec quelque luciole magique et quleque lampadaire et une citadel au loin. digital art.png-d6fc8c7b6f9b9ea32d356fa888d712b8.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://expl/DALL·E 2023-01-22 17.24.48 - une foret de nuit avec quelque luciole magique et quleque lampadaire et une citadel au loin. digital art.png"
+dest_files=[ "res://.import/DALL·E 2023-01-22 17.24.48 - une foret de nuit avec quelque luciole magique et quleque lampadaire et une citadel au loin. digital art.png-d6fc8c7b6f9b9ea32d356fa888d712b8.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
